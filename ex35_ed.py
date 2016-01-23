@@ -313,10 +313,17 @@ def game_logo():
 	"""
 	print logo + '\n\n\n'			
 
+def title_screen():
+	game_logo()
+
+	username_question = 'What do I call you?\n'
+	print '-=' * len(username_question) + '-'
+	print username_question
+	print '-=' * len(username_question) + '-'
+	global username
+	username = raw_input(">>")
+	
 ### Script Execution ###
 
-game_logo()
-
-username = raw_input("What do I call you?\n>>")
-
+title_screen()
 start()
